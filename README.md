@@ -5,34 +5,31 @@ To write a python program to implement multivariate linear regression and predic
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
- ##Step1 Import Pandas library.
+Step1 Import pandas as pd.
 
- 
- ##Step2 Import Linear_model from sklearn.
+Step2 Read the csv file.
 
- 
- ##Step3 Read the csv file using pandas library.
+Step3 Get the value of X and y variables.
 
- 
- ##Step4 Enter the parameters of the linear function.
+Step4 Create the linear regression model and fit.
 
- 
- ##Step5 Print the parameters of the linear function
+Step5 Predict the CO2 emission of a car where the weight is 1000kg, and the volume is 1390cm3.
+
+Step6 Print the predicted output.
 
 ## Program:
 ```
- import pandas as pd
- from sklearn import linear_model
- df=pd.read_csv('car (2).csv')
- x=df[['Weight','Volume']]
- y=df['CO2']
- regr=linear_model.LinearRegression()
- regr.fit(x,y)
- print("Coefficient:",regr.coef_)
- print("Intercept:",regr.intercept_)
- predictedCO2=regr.predict([[3300,1300]])
- print("Predicted CO2 for the corresponding weight and 
-volume",predictedCO2)
+import pandas as pd
+from sklearn import linear_model
+df = pd.read_csv("carsemission.csv")
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+print('Coefficients:', regr.coef_)
+print('Intercept:',regr.intercept_)
+predictedCO2 = regr.predict([[3300, 1300]])
+print('Predicted CO2 for the corresponding weight and volume',predictedCO2)
 
 
 
@@ -40,6 +37,7 @@ volume",predictedCO2)
 
 ```
 ## Output:
+![443001241-3d8b9c74-da5d-4927-adf4-0e4cfee81b65](https://github.com/user-attachments/assets/ebf0c3af-9543-4cc7-9bf0-58c3f5bf7481)
 
 ### Insert your output
 
